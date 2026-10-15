@@ -1,0 +1,255 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hablemos de Salud Mental</title>
+<style>
+:root{
+  --ink:#171525;
+  --blue:#4aa8ff;
+  --purple:#8c62e8;
+  --pink:#ff83ad;
+  --yellow:#ffd84d;
+  --green:#9be36d;
+  --paper:#fffdf8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:25px;
+  background:
+    radial-gradient(circle at 10% 10%,#ffd9e6 0 90px,transparent 91px),
+    radial-gradient(circle at 90% 85%,#d7c9ff 0 110px,transparent 111px),
+    #dfeaff;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+}
+.poster{
+  width:min(950px,100%);
+  background:var(--paper);
+  border:5px solid var(--ink);
+  border-radius:28px;
+  padding:34px;
+  box-shadow:12px 12px 0 var(--ink);
+  position:relative;
+  overflow:hidden;
+}
+.decor{position:absolute;font-size:42px;font-weight:bold}
+.d1{top:15px;left:20px;color:var(--pink);transform:rotate(-15deg)}
+.d2{top:35px;right:25px;color:var(--purple);transform:rotate(15deg)}
+.d3{bottom:20px;left:20px;color:var(--blue)}
+.d4{bottom:25px;right:25px;color:var(--yellow)}
+
+header{text-align:center;position:relative;z-index:1}
+.kicker{
+  display:inline-block;
+  background:var(--yellow);
+  border:4px solid var(--ink);
+  border-radius:30px;
+  padding:8px 20px;
+  font-weight:900;
+  font-size:20px;
+  transform:rotate(-2deg);
+}
+h1{
+  margin:16px 0 0;
+  font-size:clamp(55px,9vw,100px);
+  line-height:.85;
+  letter-spacing:-4px;
+  color:var(--blue);
+  -webkit-text-stroke:3px var(--ink);
+  text-shadow:5px 5px 0 var(--ink);
+}
+.subtitle{
+  font-size:clamp(28px,5vw,52px);
+  font-weight:1000;
+  color:var(--purple);
+  margin:12px 0 25px;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1.15fr 1fr;
+  gap:16px;
+  align-items:center;
+}
+.bubble{
+  border:4px solid var(--ink);
+  border-radius:25px;
+  padding:22px 17px;
+  font-size:22px;
+  font-weight:800;
+  line-height:1.25;
+  box-shadow:5px 5px 0 var(--ink);
+}
+.bubble.left{background:#e5d9ff}
+.bubble.right{background:#ffc4d9}
+.character{
+  background:#eaf6ff;
+  border:4px solid var(--ink);
+  border-radius:35px;
+  min-height:250px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  box-shadow:5px 5px 0 var(--ink);
+}
+.face{font-size:105px}
+.character strong{font-size:20px;text-align:center}
+
+.ribbon{
+  margin:28px auto 20px;
+  max-width:800px;
+  background:var(--yellow);
+  border:4px solid var(--ink);
+  border-radius:16px;
+  padding:13px;
+  text-align:center;
+  font-size:25px;
+  font-weight:1000;
+  transform:rotate(-1deg);
+}
+
+h3{
+  text-align:center;
+  font-size:30px;
+  margin:20px 0 14px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:11px;
+}
+.card{
+  min-height:185px;
+  border:4px solid var(--ink);
+  border-radius:20px;
+  padding:14px 8px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  box-shadow:4px 4px 0 var(--ink);
+}
+.card:nth-child(1){background:#e4d7ff}
+.card:nth-child(2){background:#b9e5ff}
+.card:nth-child(3){background:#c9f39b}
+.card:nth-child(4){background:#ffe78a}
+.card:nth-child(5){background:#ffc2d8}
+.icon{font-size:46px;margin-bottom:8px}
+.card b{font-size:17px;line-height:1.15}
+
+.message{
+  margin-top:25px;
+  border:5px solid var(--ink);
+  border-radius:25px;
+  background:var(--blue);
+  padding:18px;
+  text-align:center;
+  font-size:29px;
+  font-weight:1000;
+  box-shadow:6px 6px 0 var(--ink);
+}
+.message span{color:white}
+.footer{
+  margin-top:18px;
+  text-align:center;
+  font-size:22px;
+  font-weight:900;
+}
+.footer em{color:var(--purple);font-style:normal}
+
+@media(max-width:760px){
+  body{padding:10px}
+  .poster{padding:22px 15px;box-shadow:7px 7px 0 var(--ink)}
+  .hero{grid-template-columns:1fr}
+  .character{min-height:180px}
+  .cards{grid-template-columns:1fr 1fr}
+  .card{min-height:145px}
+}
+@media(max-width:450px){
+  h1{letter-spacing:-2px}
+  .cards{grid-template-columns:1fr}
+}
+@media print{
+  body{background:white;padding:0}
+  .poster{width:100%;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<main class="poster">
+  <div class="decor d1">♥</div>
+  <div class="decor d2">✦</div>
+  <div class="decor d3">♥</div>
+  <div class="decor d4">✦</div>
+
+  <header>
+    <div class="kicker">TU SALUD MENTAL IMPORTA 💜</div>
+    <h1>HABLEMOS</h1>
+    <div class="subtitle">PARA SANAR</div>
+  </header>
+
+  <section class="hero">
+    <div class="bubble left">
+      💬<br>
+      La depresión no siempre se ve,<br>
+      pero sí se siente.
+    </div>
+
+    <div class="character">
+      <div class="face">🧑‍🎓</div>
+      <strong>No tienes que pasar por todo esto en silencio.</strong>
+    </div>
+
+    <div class="bubble right">
+      ❤️<br>
+      Pedir ayuda no es debilidad.<br>
+      Es valentía.
+    </div>
+  </section>
+
+  <div class="ribbon">⭐ PEQUEÑOS PASOS PUEDEN CAMBIAR TU HISTORIA ⭐</div>
+
+  <h3>¿QUÉ PUEDES HACER?</h3>
+
+  <section class="cards">
+    <article class="card">
+      <div class="icon">💬</div>
+      <b>Habla con alguien de confianza</b>
+    </article>
+    <article class="card">
+      <div class="icon">🏃</div>
+      <b>Haz actividades que te hagan bien</b>
+    </article>
+    <article class="card">
+      <div class="icon">🌱</div>
+      <b>Cuida tu cuerpo y tu mente</b>
+    </article>
+    <article class="card">
+      <div class="icon">🤝</div>
+      <b>Busca apoyo de un adulto o profesional</b>
+    </article>
+    <article class="card">
+      <div class="icon">😊</div>
+      <b>Recuerda: eres importante</b>
+    </article>
+  </section>
+
+  <div class="message">
+    ❤️ <span>TU VIDA TIENE VALOR.</span><br>
+    TÚ IMPORTAS. NO ESTÁS SOLO/A.
+  </div><br>
+<a href=" https://www.creciendoconcarino.com/"><h2> Ayuda psiquiatrica<h2/> </a> <h2> Número de whatsapp:   315 4921448 </h2>
+  <div class="footer">
+    Hablemos hoy, <em>para construir un mañana con esperanza.</em> 🌱
+  </div>
+</main>
+</body>
+</html>
